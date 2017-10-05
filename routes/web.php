@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('home', function (){
+   echo "Hola sóc la HOME";
+});
+
+Route::get('tasks', 'TaskController@index');
+
+Route::get('createFakeTask', function (){
+    factory('App\Task', 30)->create();
+});
+
+// Cruddy by design CRUD -> Create Update Retrieve Delete
+//Route::post
+//Route::put
+//Route::delete
